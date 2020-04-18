@@ -1,4 +1,7 @@
 <h1>Patients</h1>
+
+<ul>
 <%=@patients.each do |patient|%>
-<%=patient.name%> has <%=pluralize(patient.appointments.count, 'appointment')%>
+<li>Name: <%=patient.name%> Number of Appointments: <%=patient.appointments.count%></li>
 <%end%>
+</ul>
