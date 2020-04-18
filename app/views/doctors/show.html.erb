@@ -3,4 +3,6 @@
 Department: <%=@doctor.department%>
 
 Appointments:
-January 12, 2016 at 3:0
+<%@doctor.patients.each do |patient|%>
+<%=link_to patient.name, patient_path(patient)%>: <%=patient.appointment_datetime.strftime("%B %d, %Y at %H:%M")%>
+<%end%>
