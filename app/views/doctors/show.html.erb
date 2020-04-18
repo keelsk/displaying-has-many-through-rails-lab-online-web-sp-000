@@ -4,5 +4,5 @@ Department: <%=@doctor.department%>
 
 Appointments:
 <%@doctor.patients.each do |patient|%>
-<%=link_to patient.name, patient_path(patient)%>: <%=patient.appointment_datetime.strftime("%B %d, %Y at %H:%M")%>
+<%=link_to patient.name, patient_path(patient)%>: <%=@doctor.appointment_datetime.strftime("%B %d, %Y at %H:%M")%>
 <%end%>
